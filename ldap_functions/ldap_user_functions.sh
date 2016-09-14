@@ -23,7 +23,7 @@ uidNumber: ${nextUid}
 gidNumber: 5000
 homeDirectory: /home/${USERNAME}
 gecos: ${FULLNAME},,,
-shadowLastChange: 1
+shadowLastChange: $(($(date --utc --date "$1" +%s)/86400))
 shadowMax: 99999
 shadowWarning: 7
 EOF
